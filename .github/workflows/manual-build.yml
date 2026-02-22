@@ -1,34 +1,27 @@
 name: Manual Build APK
-
 on:
   workflow_dispatch:
-
 jobs:
   build-apk:
     name: Build Android APK
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
       - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
-
       - name: Generate Gradle Wrapper
         run: gradle wrapper --gradle-version 8.4
-
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-
       - name: Build Debug APK
         run: ./gradlew assembleDebug --stacktrace
-
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: fir-portal-apk
-          path: app/buildname: Ma
+          path: app/build/outputs/apk/debug/*.apk
+          retention-days: 7
