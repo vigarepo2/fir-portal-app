@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/input_bg"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp">
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp"/>
+    <TextView
+        android:id="@+id/txtMeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_muted"
+        android:textSize="12sp"
+        android:layout_marginBottom="12dp"/>
+    <TextView
+        android:id="@+id/btnDownloadRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_black"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="Download PDF"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+</LinearLayout>
